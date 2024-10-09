@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp scripts/ ~/.bin
+mv scripts/*.sh ~/.bin

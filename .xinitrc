@@ -29,5 +29,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-bash /home/flask/.suckless/dwm/autostart.sh &
+bash "$HOME/.suckless/dwm/autostart.sh" &
 exec dwm
