@@ -9,7 +9,14 @@ if ! [ -d $suckless_cfg_dir ] ; then
 	git clone https://github.com/notflask/suckless "$suckless_cfg_dir"
 
 	# install libs
-	sudo pacman -S libxft libx11 libxinerama xorg xorg-xinit
+	sudo pacman -S --no-confirm libxft libx11 libxinerama xorg xorg-xinit
+
+	# install fonts
+	sudo pacman -S --no-confirm unzip
+	wget -o iosevka.zip https://github.com/be5invis/Iosevka/releases/download/v31.8.0/PkgTTF-Iosevka-31.8.0.zip
+ 	unzip iosevka.zip
+  	sudo mv iosevka/*.ttf /usr/share/fonts
+   	fc-cache -fv
 
 	# build it all 
 	for app in "${suckless_apps[@]}"; do
