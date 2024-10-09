@@ -6,7 +6,7 @@ suckless_apps=("st" "dwm" "scroll")
 
 if ! [ -d $suckless_cfg_dir ] ; then
 	# clone suckless's applications 
-	git clone git@gitlab.com:n0tflask/suckless.git "$suckless_cfg_dir"
+	git clone https://github.com/notflask/suckless "$suckless_cfg_dir"
 
 	# build it all 
 	for app in "${suckless_apps[@]}"; do
