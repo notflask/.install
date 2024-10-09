@@ -8,6 +8,9 @@ if ! [ -d $suckless_cfg_dir ] ; then
 	# clone suckless's applications 
 	git clone https://github.com/notflask/suckless "$suckless_cfg_dir"
 
+	# install libs
+	sudo pacman -S libxft libx11 libxinerama xorg xorg-xinit
+
 	# build it all 
 	for app in "${suckless_apps[@]}"; do
 		cd "$suckless_cfg_dir/$app"
