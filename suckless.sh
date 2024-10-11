@@ -6,7 +6,7 @@ suckless_apps=("st" "dwm" "scroll")
 
 if ! [ -d $suckless_cfg_dir ] ; then
 	# clone suckless's applications 
-	git clone https://github.com/notflask/suckless "$suckless_cfg_dir"
+	git clone https://github.com/notflask/.suckless "$suckless_cfg_dir"
 
 	# install libs
 	sudo pacman -S libxft libx11 libxinerama xorg xorg-xinit
